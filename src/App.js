@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar';
 import Textform from './Components/Textform';
 import Acordian from './Components/Acordian'
 import React, { useState } from 'react'
-import { BrowserRouter , Route, Routes, Link } from "react-router-dom";
+import { HashRouter , Route, Routes, Link } from "react-router-dom";
 
 function App() {
   // setInterval(() => {
@@ -33,7 +33,7 @@ function App() {
     <>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"></link>
     
-    <BrowserRouter>
+    <HashRouter>
     <Navbar title="Textutils" mode={mode} num={13} toggle={toggle} />
     <Routes>
             <Route path="/acordian" element={<Acordian />}>
@@ -41,7 +41,7 @@ function App() {
             <Route path="/" element={<Textform   mode={mode}  />}>
             </Route>
           </Routes>
-          </BrowserRouter>
+          </HashRouter>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </>
 
